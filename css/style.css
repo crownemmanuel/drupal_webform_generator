@@ -1,0 +1,64 @@
+.container-fluid {
+  position: relative;
+  padding: 40px;
+  width: 100%;
+  min-height: auto;
+  overflow-y: hidden;
+  background: url(bg-pattern.png), #7b4397;
+  background: url(bg-pattern.png), -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: url(bg-pattern.png), linear-gradient(to left, #7b4397, #dc2430);
+  color: #fff;
+}
+
+a {
+  color: #f48a02;
+  text-decoration: none;
+}
+
+input {
+  color: #737171;
+}
+
+#text {
+  border: solid 1px #CCC;
+  width: 100%;
+  height: 345px;
+  color: #737171;
+}
+
+.tab-content {
+  background: white;
+  height: 305px;
+  border: solid #CCC 1px;
+  margin-bottom: 20px;
+  color: #737171;
+}
+
+.description {
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: normal;
+  background-color: #f5f4f4;
+  color: #000;
+}
+
+.nav>li>a {
+  color: white;
+}
+
+#simple {
+  padding: 20px;
+}
+
+#generate {
+  background-color: #83408e;
+  border-color: #9465a3;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-weight:bold;
+}

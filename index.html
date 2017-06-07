@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Drupal 8 Webform Bulk Element Generator</title>
+
+  <meta name="description" content="Source code generated using layoutit.com">
+  <meta name="author" content="LayoutIt!">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/codemirror.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Drupal 8 Webform Bulk Element Generator</h2>
+        <div>
+          This web-based utility helps generate bulk fields from a text input for the <a href="https://www.drupal.org/project/webform">Webform Module</a>. This is useful in cases where you need to create a lot of fields of the same type. </br>To use:
+          paste all your data into the source text input one line at a time, define the paraments of the element and hit the generate button.
+          </br>NOTE: Using the advanced mode you could technically use this tool as a bulk YAML generator to generate a YAML file with repeated lines for any other use case
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Source Text</h3>
+            <textarea id="text" name="text"></textarea>
+          </div>
+          <div class="col-md-6">
+            <h3>Form Element</h3>
+            <div class="tabbable" id="tabs-767550">
+              <ul class="nav nav-tabs">
+                <li class="active">
+                  <a href="#simple" data-toggle="tab">Simple Mode</a>
+                </li>
+                <li id="advance-tab">
+                  <a href="#advance" data-toggle="tab">Advance Mode</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="simple">
+                  <p>
+                    <label for="field">Field Type</label>
+                    <select id="field" name="field">
+                    <option value="textfield">Text Feild</option>
+                    <option value="number">Number</option>
+                    <option value="textarea">Text Area</option>
+                    <option value="password">Password</option>
+                    <option value="email">Email</option>
+                    <option value="webform_link">Link</option>
+                   </select>
+                  </p>
+                  <p>
+                    <label for="machineid">Machine ID</label>
+                    <input type="textfield" id="machineid" name="machineid" value="question" />
+                    <label id="machineidSuggestion">question_1</label>
+                  </p>
+                  <p>
+                    <label for="startIndex">Start Index</label>
+                    <input type="number" id="startIndex" name="startIndex" value="1" />
+                  </p>
+                </div>
+                <div class="tab-pane" id="advance">
+                  <textarea id="yamlInput" name="yamlInput"></textarea>
+                  <p>
+
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <button id="generate" type="button" class="btn btn-lg btn-primary">Generate Elements</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h3>YAML Output</h3>
+            <div class="label label-warning description"> Copy the generated YAML code below and paste it in http://yoursite.url/admin/structure/webform/manage/webform_machine_id/source</div>
+            <textarea id="yamlOutput" name="yamlOutput"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/codemirror.js"></script>
+  <script src="js/yaml.js"></script>
+  <script src="js/scripts.js"></script>
+  <footer>
+    Author: Emmanuel Crown | <a href="https://github.com/crownemmanuel/drupal_webform_generator">Download Source Code</a> </footer>
+</body>
+
+</html>
